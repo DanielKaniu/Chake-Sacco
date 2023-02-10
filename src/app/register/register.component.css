@@ -1,0 +1,30 @@
+#title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+form{
+    width: 70%;
+    margin: auto;
+}
+mat-select{
+    color: rgb(75, 34, 187);
+}
+mat-form-field{
+    color: teal;
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+mat-label{
+    color: rgb(92, 89, 85);
+}
+mat-option{
+    background: rgba(189, 167, 219, 0.2);
+}
+mat-radio-button{
+    color: rgb(180, 176, 171);
+}
+button{
+    background: rgb(180, 147, 84);
+}
