@@ -1,0 +1,79 @@
+<form [formGroup]="update_group" (ngSubmit)="update_user()">
+    <h2>Update Member Details</h2>
+      <img formControlName="image" src="../../assets/members/{{update_group.get('image')!.value}}" alt="User's Image">
+      <!-- 
+      First name. -->
+      <mat-form-field appearance="fill" color="primary">
+          <mat-label>Enter first name</mat-label>
+          <input matInput formControlName="first_name">
+          <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <!-- 
+      Second name. -->
+      <mat-form-field appearance="fill">
+          <mat-label>Enter second name</mat-label>
+          <input matInput formControlName="second_name">
+          <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <!-- 
+      Email. -->
+      <mat-form-field appearance="fill">
+        <mat-label>Enter user email</mat-label>
+        <input type="email" matInput formControlName="email">
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <!-- 
+      Occupation. -->
+      <mat-form-field appearance="fill">
+        <mat-label>User's occupation</mat-label>
+        <input type="text" matInput formControlName="occupation">
+        <mat-icon matSuffix>work_outline</mat-icon>
+      </mat-form-field>
+      <!-- 
+      Gender. -->
+      <mat-form-field appearance="fill">
+        <mat-label>Pick gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- 
+      Contact. -->
+      <mat-form-field appearance="outline">
+          <mat-label>Enter phone number</mat-label>
+          <input type="text" matInput formControlName="phone">
+          <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field>
+      <!-- 
+      Location. -->
+      <mat-form-field appearance="fill">
+          <mat-label>Where do you live?</mat-label>
+          <input matInput formControlName="location">
+          <mat-icon matSuffix>person_pin_circle</mat-icon>
+      </mat-form-field>
+      <!-- 
+      Contribution. -->
+      <mat-form-field appearance="outline">
+          <mat-label>Enter contribution</mat-label>
+          <input type="number" matInput formControlName="contribution">
+          <mat-icon matSuffix>attach_money</mat-icon>
+      </mat-form-field><br>
+  
+      <div id="footer">
+        <button mat-button mat-dialog-close>
+          Cancel
+        </button>
+        <button 
+          mat-stroked-button 
+          type="submit" >
+          <!-- [disabled]="!registration_group.valid"> -->
+            Update
+        </button>
+      </div>
+  </form>
+
+<div mat-dialog-actions>
+  
+  
+</div>

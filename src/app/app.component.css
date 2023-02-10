@@ -2,7 +2,7 @@
 The sidenav. */
 #sidenav_container{
     height: 100%;
-    background: white;
+    /* background: white; */
 }
 #sidenav_content{
     height: 50%;
@@ -20,7 +20,7 @@ The sidenav menu button. */
     left: 2%;
     top: 2%;
     z-index: 1;
-    background: #93aab1;
+    background: #301E67;
 }
 /*
 The sidenav's logo. */
@@ -55,8 +55,19 @@ The links in the sidenav. */
     margin-top: 10%;
     margin-left: 6%;
 }
+mat-icon{
+    margin-right: 5%;
+}
 .icon::hover{
     cursor: pointer;
+}
+/* 
+Highligh the currently active route in the sidenav. */
+.is-active {
+    background-color: rgb(240, 230, 230);
+    padding: 2%;
+    margin-right: 1%;
+    border-radius: 0.2rem 1rem 1rem 0.2rem ;
 }
 #copyright{
     position: fixed;

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- 
+    Use icons. -->
+    <script
+      src="https://kit.fontawesome.com/4fd11e560e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        font-size: large;
+      }
+      #container {
+        display: flex;
+        padding-top: 2%;
+      }
+      #plan {
+        width: 73%;
+      }
+      #dev {
+        width: 25%;
+        text-align: center;
+        margin-top: 5%;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background: #efefef;
+      }
+      #img_container {
+        margin-top: 10%;
+      }
+      img {
+        width: 90%;
+        border-radius: 8%;
+      }
+      figcaption {
+        margin-top: 5%;
+        font-size: larger;
+      }
+      #title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1%;
+      }
+      #greetings {
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+      a {
+        text-decoration: none;
+        margin-left: 5%;
+      }
+      i {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body onload="typeWriter()">
+    <div id="container">
+      <div id="dev">
+        <!--
+            Type setting greetings. -->
+        <p id="greetings"></p>
+        I AM DANIEL KANIU
+        <figure>
+          <img src="image/me.jpeg" alt="Daniel Kaniu's image" />
+          <figcaption>
+            My Stack: <br />
+            <a href="https://github.com/DanielKaniu/">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://angular.io/">
+              <i class="fa-brands fa-angular"></i>
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+      <div id="plan">
+        <div id="title">2023 ROADMAP</div>
+        <table>
+          <thead>
+            <th>Application</th>
+            <th>Problem</th>
+            <th>Plan</th>
+            <th>Outcome</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kentionary</td>
+              <td>
+                There is a language barrier in Kenya where people from different
+                ethnic groups experience challenges in communicating especially
+                if they are not fluent in Kenya's official languages.
+              </td>
+              <td>
+                The plan is to have a platform that helps in translating Kenyan
+                local languages.
+              </td>
+              <td>
+                This may facilitate better communication between people from the
+                different ethnic groups.
+              </td>
+            </tr>
+            <tr>
+              <td>Sacco Application</td>
+              <td>
+                The sacco company has no dynamic way to capture members'
+                information, they register new users through excel work book and
+                that is how they store the data.
+              </td>
+              <td>
+                The plan is to build them a simple application that will be
+                useful in registering new users, even on-the-go, using a mobile
+                phone.
+              </td>
+              <td>
+                Hopefully the application helps simplifies the company's way of
+                operation and helps it gain more traction.
+              </td>
+            </tr>
+            <tr>
+              <td>Church Application</td>
+              <td>
+                There is a challenge of registering new users or new believers
+                hence following up on them may be difficult. New church
+                members/believers are registered in a book Also, when having
+                meetings, e.g., members who attend leaders' meetings register
+                themselves in a book. So unless someone has the book, you can
+                not know the attendees.
+              </td>
+              <td>
+                The plan is to have a platform that can help in digitally
+                registering new users/believers. The platform can also
+                process/analyze the data provided, e.g., show the attendance
+                trends.
+              </td>
+              <td>
+                Hopefully the application will help the church handle the data
+                it collects in digital way.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      function display_greetings() {
+        var today = new Date();
+        var hourNow = today.getHours();
+        var greeting;
+
+        if (hourNow > 15) {
+          greeting = "Good Evening";
+        } else if (hourNow > 12) {
+          greeting = "Good Afternoon";
+        } else if (hourNow > 0) {
+          greeting = "Good Morning";
+        } else {
+          greeting = "Welcome";
+        }
+
+        return greeting;
+      }
+      var i = 0;
+      var txt = display_greetings();
+      var speed = 250;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("greetings").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+  </body>
+</html>

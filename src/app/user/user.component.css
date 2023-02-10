@@ -1,3 +1,25 @@
+#title{
+    text-align: center;
+    font-weight: 700;
+}
+mat-icon{
+    font-size: 01rem;
+}
 table {
     width: 100%;
+}
+tr{
+    cursor: pointer;
+}
+tr:hover{
+    background: rgb(253, 253, 202);
+}
+img{
+    width: 70px;
+    height: 40px;
+    margin-top: 4px;
+    border-radius: 15%;
+}
+td:nth-child(n) {  
+    width: 5%;
 }

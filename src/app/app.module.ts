@@ -15,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 //
 //Components.
 import { AppComponent } from './app.component';
@@ -24,6 +26,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ContributionComponent } from './contribution/contribution.component';
 import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ContactComponent,
     ContributionComponent,
     AboutComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    SnackBarComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     MatButtonModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatSnackBarModule,
+    MatDialogModule
   ],
   exports: [RouterModule],
   providers: [],

@@ -1,5 +1,6 @@
-<form  [formGroup]="registration_group" (ngSubmit)="register()">
+<form  [formGroup]="registration_group">
   <div id="title">CHAKE SACCO LTD.</div>
+  <h2>Register a new member</h2>
     <!-- 
     First name. -->
     <mat-form-field appearance="fill" color="primary">
@@ -36,6 +37,9 @@
         <mat-option value="Male">Male</mat-option>
         <mat-option value="Female">Female</mat-option>
       </mat-select>
+      <mat-error *ngIf="registration_group.hasError('required')"
+      >Please choose a gender</mat-error
+    >
     </mat-form-field>
     <!-- 
     Contact. -->
@@ -59,5 +63,21 @@
         <mat-icon matSuffix>attach_money</mat-icon>
     </mat-form-field><br>
 
-    <button mat-stroked-button>Register</button>
+    <div id="footer">
+      <span class="upload_image">
+        <span>Upload a Picture</span>
+        <button class="upload_button" mat-fab color="primary" (click)="fileInput.click()">
+          <span>+</span>
+          <input #fileInput type="file" (change)="upload_image($event)" style="display:none;" />
+        </button>
+      </span>
+
+      <button 
+        mat-stroked-button 
+        type="submit" 
+        [disabled]="!registration_group.valid"
+        (click)="register()">
+          Register
+      </button>
+    </div>
 </form>

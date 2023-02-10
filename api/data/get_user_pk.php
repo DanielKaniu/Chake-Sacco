@@ -3,19 +3,17 @@
 //Bring in the necessary files.
 include_once '../config.php';
 //
-//Fetch the sacco member.
-function get_member(){
+//Fetch a member's id.
+function get_user_pk($email){
     //
     //Access config file's object.
     global $pdo;
     //
     //The query to get the member.
     $query = "SELECT 
-                member.first_name, member.second_name, member.email, member.occupation, member.gender, member.phone,
-                member.location, fee.contribution, image.name as image
-            FROM member
-            INNER JOIN fee on fee.member = member.member
-            LEFT join image on image.member = member.member";
+            member.member
+        FROM member
+        WHERE member.email = '$email'";
     //
     //Execute the query.
     $statement = $pdo->query($query);
@@ -39,14 +37,6 @@ function get_member(){
     if(count($row) > 0){
         //
         //Display the potential.
-        echo json_encode(
-            [
-                "ok" => true,
-                "data" => $row
-            ]
-        );
+        return $row[0]['member'];
     }
 }
-//
-//Invoke the function.
-get_member();

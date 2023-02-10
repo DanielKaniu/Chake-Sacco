@@ -1,30 +1,38 @@
 <mat-drawer-container id="sidenav_container" autosize>
-  <mat-drawer #drawer id="sidenav" mode="side" mode="side" opened="true">
+  <mat-drawer #drawer id="sidenav" mode="side" mode="side">
     <div id="sidenav_logo_container">
       <img id="logo_sidenav" src="../../assets/images/kenny.png" alt="Chake's Logo">
       <div id="title_sidenav">CHAKE SACCO</div>
       <div id="tagline">Tagline</div>
     </div>
     
-    <span class="icon" routerLink="/register">
+    <span class="icon" routerLink="/register" [routerLinkActive]="['is-active']">
       <mat-icon>person_add</mat-icon>Register
     </span>
     
-    <span class="icon" routerLink="/user">
+    <span class="icon" routerLink="/user" [routerLinkActive]="['is-active']">
       <mat-icon>group</mat-icon>View Users 
     </span>
     
-    <span class="icon" routerLink="/about">
+    <span class="icon" routerLink="/about" [routerLinkActive]="['is-active']">
       <mat-icon>attach_money</mat-icon>View Contribution 
     </span>
-  
-    <span class="icon" routerLink="/contact">
-      <mat-icon>contact_phone</mat-icon>Contact Us
+
+    <span class="icon" routerLink="/report" [routerLinkActive]="['is-active']">
+      <mat-icon>bubble_chart</mat-icon>Report
     </span>
 
-      <!-- <span class="icon" routerLink="/support">
-        <mat-icon>attach_money</mat-icon>Provide Support
-      </span> -->
+    <span class="icon" routerLink="/team" [routerLinkActive]="['is-active']">
+      <mat-icon>group_work</mat-icon>Team
+    </span>
+    
+    <span class="icon" routerLink="/suppliers" [routerLinkActive]="['is-active']">
+      <mat-icon>people</mat-icon>Owners
+    </span>
+
+    <span class="icon" routerLink="/customer" [routerLinkActive]="['is-active']">
+      <mat-icon>settings</mat-icon>Settings
+    </span>
 
     <div id="copyright">© 2023 Chake Sacco, Inc.</div>
   </mat-drawer>

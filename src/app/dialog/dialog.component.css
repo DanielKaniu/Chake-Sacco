@@ -1,10 +1,5 @@
-#title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 1.5%;
-}
 h2{
+    font-style: italic;
     text-align: center;
 }
 form{
@@ -18,7 +13,7 @@ mat-form-field{
     color: teal;
     width: 40%;
     margin-left: 5%;
-    margin-top: 2.5%;
+    margin-top: 2%;
 }
 mat-label{
     color: rgb(92, 89, 85);
@@ -29,12 +24,22 @@ mat-option{
 mat-radio-button{
     color: rgb(180, 176, 171);
 }
-button{
-    background: #03C988;
-    margin: 0 10px;
-}
 #footer{
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+    justify-content: end;
+}
+button{
+    background: #03C988;
+    color: aliceblue;
+    margin-left: 3%;
+}
+button[type='submit']{
+    background: #586762
+}
+img{
+    display: block;
+    width: 10%;
+    height: 5%;
+    border-radius: 10%;
+    margin: auto;
 }
